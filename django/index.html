@@ -1,0 +1,536 @@
+<!DOCTYPE HTML>
+<!--
+	Aesthetic by gettemplates.co
+	Twitter: http://twitter.com/gettemplateco
+	URL: http://gettemplates.co
+-->
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Movie Project &mdash; BB104 T1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by GetTemplates.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="GetTemplates.co" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+    
+    <!-- pretty-checkbox.scss -->
+    <link rel="stylesheet" href="../static/css/pretty-checkbox.css">  
+          
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../static/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../static/css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="../static/css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../static/css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="../static/css/magnific-popup.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="../static/css/bootstrap-datepicker.min.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../static/css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../static/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+    
+	<body>
+		
+	<div class="gtco-loader"></div>
+	
+	<div id="page">
+
+	
+	<!-- <div class="page-inner"> -->
+	<nav class="gtco-nav" role="navigation">
+		<div class="gtco-container">
+			
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<div id="gtco-logo"><a href="index.html">Movie Subway</a></div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(../static/images/movie.jpg)">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-left">
+					<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+                            <h1>電影全球票房預測 <br/>看這裡!</h1>	
+				    </div> 
+
+					<div class="row row-mt-15em">
+
+						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+							<div class="form-wrap">
+								<div class="tab">
+									
+									<div class="tab-content">
+                                       <h3>輸入特徵值</h3>
+                                       <form action="/result/" method='POST'>
+                                        {% csrf_token %}
+										<div id="left" class="tab-content-inner active" data-content="signup">
+											
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="length">電影片長(mins)</label>
+														<input type="text" id="length" class="form-control" name='length'>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="month">全球首映月份</label>
+														<select name="month" id="month" class="form-control">
+                                                            <option value=0>    </option>
+															<option value=1.0>一月</option>
+															<option value=2.0>二月</option>
+															<option value=3.0>三月</option>
+															<option value=4.0>四月</option>
+                                                            <option value=5.0>五月</option>
+															<option value=6.0>六月</option>
+															<option value=7.0>七月</option>
+															<option value=8.0>八月</option>
+                                                            <option value=9.0>九月</option>
+															<option value=10.0>十月</option>
+															<option value=11.0>十一月</option>
+															<option value=12.0>十二月</option>
+														</select>
+													</div>
+												</div>
+                                                <div class="row form-group">
+													<div class="col-md-12">
+														<label for="director">導演</label>
+														<select name="director" id="director" class="form-control">
+                                                            <option value=0>           </option>
+															<option value='steven'>Steven Spielberg</option>
+															<option value='anthony'>Anthony Mann</option>
+															<option value='cecil'>Cecil B. DeMille</option>
+															<option value='woody'>Woody Allen</option>
+                                                            <option value='john'>John Wayne</option>
+                                                            <option value='ken'>Ken Loach</option>
+                                                            <option value='clint'>Clint Eastwood</option>
+                                                            <option value='busby'>Busby Berkeley</option>
+                    									</select>
+													</div>
+												</div>
+                                                	<div class="row form-group">
+													<div class="col-md-12">
+														<label for="writer">編劇</label>
+														<select name="writer" id="writer" class="form-control">
+                                                            <option value=0>         </option>
+															<option value="stephen">Stephen King</option>
+															<option value="david">David Koepp</option>
+															<option value="cecil">Cecil B. DeMille</option>
+															<option value="john">John Hughes</option>
+                                                            <option value="woody">Woody Allen</option>
+                                                            <option value="dennis">Dennis Feldman</option>
+                                                            <option value="elmore">Elmore Leonard</option>
+                                                            <option value="william">William Shakespeare</option>
+														</select>
+													</div>
+												</div>
+                                                <div class="row form-group">
+													<div class="col-md-12">
+														<label for="company">出品公司</label>
+														<select name="company" id="company" class="form-control">
+                                                            <option value=0>         </option>
+															<option value="warner">Warner Bros.</option>
+															<option value="new">New Line Cinema</option>
+															<option value="columbia">Columbia Pictures Corporation</option>
+															<option value="universal">Universal Pictures</option>
+                                                            <option value="touchstone">Touchstone Pictures</option>
+                                                            <option value="metro">Metro-Goldwyn-Mayer (MGM)</option>
+                                                            <option value="paramount">Paramount Pictures</option>
+                                                            <option value="twentieth">Twentieth Century Fox</option>
+														</select>
+													</div>
+												</div>
+                                             
+										</div>
+                                        
+                                        <div class="row form-group" id="right" >  
+                                            <br/>
+                                            <div>
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='sport' value=1.0>
+                                                    <div class="state p-success">
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>運動(Sport)</label>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='musical' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>音樂劇(Musical)</label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='family' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>家庭(Family)</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                         
+                                            <div>
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='mystery' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>懸疑(Mystery)</label>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='history' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>歷史(History)</label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='crime' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>犯罪(Crime)</label>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                                         
+                                           <div>      
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='drama' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>劇情(Drama)</label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='music' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>音樂(Music)</label>
+                                                    </div>
+                                                </div>
+                                                                
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='adult' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>成人(Adult)</label>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                                   
+                                           <div>       
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='news' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>新聞(News)</label>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='xn' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>女同志(X.N)</label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='fantasy' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>奇幻(Fantasy)</label>
+                                                    </div>
+                                                </div>
+                                         </div>
+                                         <div>         
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='romance' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>愛情(Romance)</label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='war' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>戰爭(War)</label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='action' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>動作(Action)</label>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                           <div>      
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='adventure' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>冒險(Adventure)</label>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='horror' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>靈異(Horror)</label>
+                                                    </div>
+                                                </div>
+                                         </div>
+                                         <div>         
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='sci_fi' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>科幻(Sci-Fi)</label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='comedy' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>喜劇(Comedy)</label>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div>        
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='western' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>西部片(Western)</label>
+                                                    </div>
+                                                </div>
+                                                 
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='thriller' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>刺激驚悚(Thriller)</label>
+                                                    </div>
+                                                </div>
+                                         </div>
+                                         <div>       
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='animation' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>動畫(Animation)</label>
+                                                    </div>
+                                                </div>
+                                   
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='bio' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>人物傳記(Biography)</label>
+                                                    </div>
+                                                </div>
+                                          </div>
+                                          <div>        
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='noir' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>黑色電影(Film Noir)</label>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="pretty p-svg p-curve">
+                                                    <input type="checkbox" name='doc' value=1.0>
+                                                    <div class="state p-success">
+                                                        <!-- svg path -->
+                                                        <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                                        </svg>
+                                                        <label>紀錄片(Documentary)</label>
+                                                    </div>
+                                                </div>                             
+                                          </div> 
+                                            
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            
+                                            <div class="row form-group">
+                            				    <div class="col-md-12">
+                            				        <input type="submit" class="btn btn-primary btn-block" value="Submit">
+                            				    </div>
+                                            </div>                                         
+                                                                   
+                                    </div>                       
+              
+                                           
+                            </form>               
+                                        
+									</div>
+                                    
+								</div>
+							</div>
+						</div>
+					</div>
+							
+					
+				</div>
+			</div>
+		</div>
+	</header>
+	
+
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="../static/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="../static/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../static/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../static/js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="../static/js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="../static/js/jquery.countTo.js"></script>
+
+	<!-- Stellar Parallax -->
+	<script src="../static/js/jquery.stellar.min.js"></script>
+
+	<!-- Magnific Popup -->
+	<script src="../static/js/jquery.magnific-popup.min.js"></script>
+	<script src="../static/js/magnific-popup-options.js"></script>
+	
+	<!-- Datepicker -->
+	<script src="../static/js/bootstrap-datepicker.min.js"></script>
+	
+
+	<!-- Main -->
+	<script src="../static/js/main.js"></script>
+
+	</body>
+</html>
+
