@@ -1,1 +1,2 @@
-# movie_subway_project
+# 工業資訊策進會 Big Data 數據分析師養成班
+專題：全球電影票房預測及推薦系統
